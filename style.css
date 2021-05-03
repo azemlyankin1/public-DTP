@@ -15,8 +15,18 @@ body {
   width: 414px;
 }
 
+.logo {
+  position: absolute;
+  right: 29px;
+  display: block;
+  padding-left: 50px;
+  margin: 0 0 5px 10px;
+  z-index: 1000;
+}
+
 .container {
   padding: 0 29px;
+  position: relative;
 }
 
 nav {
@@ -31,8 +41,9 @@ nav .nav__icon .nav__sub {
   display: block;
   position: absolute;
   background-color: #000;
-  z-index: 1000;
-  left: 2rem;
+  z-index: 10;
+  top: 2rem;
+  left: 0;
   width: 90%;
   padding: 20px;
   font-size: 1rem;
@@ -45,7 +56,7 @@ nav .nav__icon .nav__sub li a {
   text-decoration: none;
   padding-left: 25px;
   color: #fff;
-  background: url(warning.png) no-repeat;
+  background: url(/img/warning.png) no-repeat;
   background-size: contain;
   background-position: left center;
 }
@@ -90,7 +101,7 @@ section img {
 }
 
 .calc {
-  background: url(maxresdefault.png) no-repeat;
+  background: url(/img/maxresdefault.png) no-repeat;
 }
 .calc .subSection {
   display: none;
@@ -112,20 +123,20 @@ section img {
 .calc .subSection li {
   margin-bottom: 10px;
   padding-left: 20px;
-  background: url(calculator.png) no-repeat;
+  background: url(/img/calculator.png) no-repeat;
   background-size: 5%;
   background-position: left center;
 }
 
 .firstMove {
-  background: url(road.png) no-repeat;
+  background: url(/img/road.png) no-repeat;
 }
 .firstMove h2 {
   margin-top: 5rem;
 }
 
 .info {
-  background: url(road11.png) no-repeat;
+  background: url(/img/road11.png) no-repeat;
 }
 
 footer {
@@ -145,7 +156,7 @@ footer span:first-child {
   padding: 20px 20px;
   border: 1px inset #b8b7b7;
   text-align: center;
-  background: url(put_tormoz-min.jpeg) no-repeat;
+  background: url(/img/put_tormoz-min.jpeg) no-repeat;
   background-size: cover;
 }
 .calcbreack .input {
