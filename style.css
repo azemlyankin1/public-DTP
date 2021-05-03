@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a:hover {
+  text-decoration: underline !important;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: rgba(231, 231, 230, 0.623);
+  width: 414px;
+}
+
+.container {
+  padding: 0 29px;
+}
+
+nav {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+nav .nav__icon {
+  position: relative;
+  cursor: pointer;
+}
+nav .nav__icon .nav__sub {
+  display: block;
+  position: absolute;
+  background-color: #000;
+  z-index: 1000;
+  left: 2rem;
+  width: 90%;
+  padding: 20px;
+  font-size: 1rem;
+}
+nav .nav__icon .nav__sub li {
+  margin-bottom: 8px;
+  margin-left: 10px;
+}
+nav .nav__icon .nav__sub li a {
+  text-decoration: none;
+  padding-left: 25px;
+  color: #fff;
+  background: url(warning.png) no-repeat;
+  background-size: contain;
+  background-position: left center;
+}
+nav .nav__icon span {
+  display: block;
+  width: 35px;
+  height: 4px;
+  background-color: #000;
+  margin-bottom: 5px;
+  transition: 0.5s;
+}
+nav .cross span {
+  margin: -4px;
+}
+nav .cross span:first-child {
+  margin-top: 30px;
+  transform: rotate(-43deg);
+}
+nav .cross span {
+  transform: rotate(43deg);
+}
+
+section {
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  height: 215px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+section h2 {
+  color: white;
+  margin-top: 2.9rem;
+  margin-left: 0.8rem;
+  font-size: 0.9rem;
+}
+section img {
+  margin: 50px 5px 40px 0;
+}
+
+.calc {
+  background: url(maxresdefault.png) no-repeat;
+}
+.calc .subSection {
+  display: none;
+  flex: none;
+  position: absolute;
+  top: 50px;
+  padding: 30px 18px;
+  background-color: #696666;
+  list-style: none;
+  border-radius: 15px;
+}
+.calc .subSection a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  display: block;
+  min-width: 300px;
+}
+.calc .subSection li {
+  margin-bottom: 10px;
+  padding-left: 20px;
+  background: url(calculator.png) no-repeat;
+  background-size: 5%;
+  background-position: left center;
+}
+
+.firstMove {
+  background: url(road.png) no-repeat;
+}
+.firstMove h2 {
+  margin-top: 5rem;
+}
+
+.info {
+  background: url(road11.png) no-repeat;
+}
+
+footer {
+  font-size: 0.6rem;
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0 10px 0;
+}
+footer span {
+  display: block;
+}
+footer span:first-child {
+  text-decoration: underline;
+}
+
+.calcbreack {
+  padding: 20px 20px;
+  border: 1px inset #b8b7b7;
+  text-align: center;
+  background: url(put_tormoz-min.jpeg) no-repeat;
+  background-size: cover;
+}
+.calcbreack .input {
+  width: 90%;
+  height: 25px;
+  border: 1px solid #000;
+  margin: 0 auto 15px;
+  border-radius: 15px;
+  background-color: #fff;
+}
+.calcbreack .lable {
+  margin-bottom: 10px;
+}
+.calcbreack .btn {
+  padding: 5px 20px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+.calcbreack .animateCar {
+  display: block;
+  width: 40px;
+}
+
+@keyframes move_eye {
+  30% {
+    transform: rotate(5deg);
+  }
+  100% {
+    margin-left: 70%;
+  }
+}
