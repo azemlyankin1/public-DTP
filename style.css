@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap");
 * {
@@ -13,7 +14,6 @@ a:hover {
 body {
   font-family: "Roboto", sans-serif;
   background-color: rgba(231, 231, 230, 0.623);
-  width: 414px;
 }
 
 .logo {
@@ -25,9 +25,17 @@ body {
   z-index: 1000;
 }
 
+.flex {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
 .container {
   padding: 0 29px;
   position: relative;
+  min-width: 364px;
 }
 
 nav {
@@ -81,12 +89,15 @@ nav .cross span {
 }
 
 section {
+  margin: 0 auto;
   border-radius: 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
-  height: 215px;
+  min-height: 215px;
+  max-width: 600px;
+  width: 100%;
   cursor: pointer;
   position: relative;
   z-index: 1;
@@ -96,13 +107,18 @@ section h2 {
   margin-top: 2.9rem;
   margin-left: 0.8rem;
   font-size: 0.9rem;
+  width: 50%;
+  max-width: 300px;
 }
 section img {
   margin: 50px 5px 40px 0;
+  position: absolute;
+  right: 1rem;
 }
 
 .calc {
   background: url(maxresdefault.png) no-repeat;
+  background-size: 100%;
 }
 .calc .subSection {
   display: none;
@@ -113,6 +129,7 @@ section img {
   background-color: #696666;
   list-style: none;
   border-radius: 15px;
+  width: 100%;
 }
 .calc .subSection a {
   color: white;
@@ -125,12 +142,13 @@ section img {
   margin-bottom: 10px;
   padding-left: 20px;
   background: url(calculator.png) no-repeat;
-  background-size: 5%;
+  background-size: 15px;
   background-position: left center;
 }
 
 .firstMove {
   background: url(road.png) no-repeat;
+  background-size: 100%;
 }
 .firstMove h2 {
   margin-top: 5rem;
@@ -145,13 +163,40 @@ section img {
 
 .info {
   background: url(road11.png) no-repeat;
+  background-size: 100%;
+}
+.info .subSection {
+  display: none;
+  flex: none;
+  position: absolute;
+  top: 50px;
+  padding: 30px 18px;
+  background-color: #1D1D1D;
+  list-style: none;
+  border-radius: 15px;
+  width: 100%;
+}
+.info .subSection a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  display: block;
+  min-width: 300px;
+}
+.info .subSection li {
+  margin-bottom: 10px;
+  padding-left: 20px;
+  background: url(calculator.png) no-repeat;
+  background-size: 15px;
+  background-position: left center;
 }
 
 footer {
+  clear: both;
   font-size: 0.6rem;
   display: flex;
   justify-content: space-between;
-  margin: 30px 0 10px 0;
+  margin: 50px 0 10px 0;
 }
 footer span {
   display: block;
@@ -160,8 +205,14 @@ footer span:first-child {
   text-decoration: underline;
 }
 
+.m-width {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
 .calcbreack {
-  padding: 20px 20px;
+  overflow: hidden;
+  padding: 50px 20px;
   border: 1px inset #b8b7b7;
   text-align: center;
   background: url(put_tormoz-min.jpeg) no-repeat;
@@ -179,6 +230,8 @@ footer span:first-child {
   margin-bottom: 10px;
 }
 .calcbreack .btn {
+  display: block;
+  margin: 0 auto;
   padding: 5px 20px;
   border-radius: 15px;
   margin-bottom: 20px;
@@ -186,6 +239,7 @@ footer span:first-child {
 .calcbreack .animateCar {
   display: block;
   width: 40px;
+  margin-left: -30px;
 }
 
 @keyframes move_eye {
@@ -193,11 +247,19 @@ footer span:first-child {
     transform: rotate(5deg);
   }
   100% {
-    margin-left: 70%;
+    margin-left: 80%;
   }
 }
+header {
+  margin: 0 auto;
+  text-align: center;
+  max-width: 1024px;
+}
+
 article {
   font-family: "Merriweather", serif;
+  max-width: 1024px;
+  margin: 0 auto;
 }
 article img {
   width: 50%;
@@ -218,3 +280,79 @@ article ul {
   margin: 5px 0 0 1rem;
   text-align: justify;
 }
+article li {
+  margin-bottom: 5px;
+}
+article .img100 {
+  float: none;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* запросы mobile first */
+/* стили для любой ширины */
+/* стили для ширины крупнее мобильных */
+/* стили для ширины 400 пикселов и выше */
+@media (max-width: 433px) {
+  section {
+    min-height: 200px;
+  }
+  section h2 {
+    font-size: 0.7rem;
+  }
+  section img {
+    right: 0.5rem;
+    width: 120px;
+  }
+
+  .calc .subSection a {
+    font-size: 0.7rem;
+    min-width: 100px;
+  }
+
+  .info .subSection a {
+    font-size: 0.7rem;
+    min-width: 100px;
+  }
+}
+/* стили для ширины крупнее фаблетов */
+/* стили для ширины 550 пикселов и выше */
+@media (min-width: 550px) {
+  header {
+    font-size: 1.5rem;
+  }
+
+  article p {
+    font-size: 1.2rem;
+  }
+  article ul {
+    font-size: 1.2rem;
+  }
+  article h1 {
+    margin: 30px 0;
+  }
+
+  section h2 {
+    font-size: 1.2rem;
+    margin-left: 2rem;
+  }
+  section img {
+    right: 2rem;
+  }
+
+  .calc .subSection a {
+    font-size: 0.7rem;
+    min-width: 100px;
+  }
+
+  .info .subSection a {
+    font-size: 0.7rem;
+    min-width: 100px;
+  }
+}
+/* стили для ширины крупнее планшетов */
+/* стили для ширины 750 пикселов и выше */
+/* стили для ширины крупнее компьютерных мониторов */
+/* стили для ширины 1000 пикселов и выше */
+/* стили для ширины крупнее компьютерных HD-мониторов */
+/* стили для ширины 1200 пикселов и выше */

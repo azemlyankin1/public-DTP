@@ -18,16 +18,24 @@ const sectionCalc = document.querySelector('.calc')
 const subSection = document.querySelector('.subSection')
 const firstMoveSection = document.querySelector('.firstMove')
 
-subSection.style.display = 'none'
-sectionCalc.addEventListener('click', () => {
-  if(subSection.style.display == 'none') {
-    subSection.style.display = 'block'
-    subSection.style.top = '194px'
-    firstMoveSection.style.marginTop = '110px'
-  } else {
-    subSection.style.display = 'none'
-    subSection.style.top = '50px'
-    firstMoveSection.style.marginTop = '0'
-  }
-  
-})
+const sectionInfo = document.querySelector('.info')
+const subSec = document.getElementById('subSec')
+const footerSection = document.querySelector('.footer')
+
+showSection(subSection, sectionCalc, firstMoveSection)
+showSection(subSec, sectionInfo, footerSection)
+
+function showSection(sectionDown, clickSection, marginSection) {
+  sectionDown.style.display = 'none'
+  clickSection.addEventListener('click', () => {
+    if(sectionDown.style.display == 'none') {
+      sectionDown.style.display = 'block'
+      sectionDown.style.top = '194px'
+      marginSection.style.marginTop = '110px'
+    } else {
+      sectionDown.style.display = 'none'
+      sectionDown.style.top = '50px'
+      marginSection.style.marginTop = '0'
+    }
+  })
+}
