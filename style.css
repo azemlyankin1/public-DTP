@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -56,7 +57,7 @@ nav .nav__icon .nav__sub li a {
   text-decoration: none;
   padding-left: 25px;
   color: #fff;
-  background: url(/img/warning.png) no-repeat;
+  background: url(warning.png) no-repeat;
   background-size: contain;
   background-position: left center;
 }
@@ -101,7 +102,7 @@ section img {
 }
 
 .calc {
-  background: url(/img/maxresdefault.png) no-repeat;
+  background: url(maxresdefault.png) no-repeat;
 }
 .calc .subSection {
   display: none;
@@ -123,20 +124,27 @@ section img {
 .calc .subSection li {
   margin-bottom: 10px;
   padding-left: 20px;
-  background: url(/img/calculator.png) no-repeat;
+  background: url(calculator.png) no-repeat;
   background-size: 5%;
   background-position: left center;
 }
 
 .firstMove {
-  background: url(/img/road.png) no-repeat;
+  background: url(road.png) no-repeat;
 }
 .firstMove h2 {
   margin-top: 5rem;
 }
+.firstMove h2 a {
+  color: white;
+  text-decoration: none;
+}
+.firstMove h2 a:hover {
+  text-decoration: none !important;
+}
 
 .info {
-  background: url(/img/road11.png) no-repeat;
+  background: url(road11.png) no-repeat;
 }
 
 footer {
@@ -156,7 +164,7 @@ footer span:first-child {
   padding: 20px 20px;
   border: 1px inset #b8b7b7;
   text-align: center;
-  background: url(/img/put_tormoz-min.jpeg) no-repeat;
+  background: url(put_tormoz-min.jpeg) no-repeat;
   background-size: cover;
 }
 .calcbreack .input {
@@ -187,4 +195,26 @@ footer span:first-child {
   100% {
     margin-left: 70%;
   }
+}
+article {
+  font-family: "Merriweather", serif;
+}
+article img {
+  width: 50%;
+  max-width: 400px;
+  float: right;
+  margin: 0.5rem 0 0.5rem 1rem;
+}
+article p {
+  text-indent: 1.5em;
+  margin-top: 1rem;
+  text-align: justify;
+  font-size: 1rem;
+}
+article h1 {
+  margin: 15px 0;
+}
+article ul {
+  margin: 5px 0 0 1rem;
+  text-align: justify;
 }
